@@ -35,6 +35,21 @@ public class FizzBuzz {
 	}
 	
 	private String evaluate(int value) {
+		
+		String res = "";
+		
+		if (value % 3 == 0) {
+			res = "Fizz";
+		}
+		if (value % 5 == 0) {
+			res = res + "Buzz";
+		}
+		if (res.isEmpty()) {
+			res = Integer.toString(value);
+		}
+		return res;
+		
+		/*
 	    if (value % 15 == 0) {
 	        return "FizzBuzz";
 	    } else if (value % 5 == 0) {
@@ -43,6 +58,6 @@ public class FizzBuzz {
 	        return "Fizz";
 	    } else {
 	        return Integer.toString(value);
-	    }
+	    } */
 	}
 }
