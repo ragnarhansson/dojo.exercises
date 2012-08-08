@@ -6,14 +6,14 @@ import java.io.InputStreamReader;
 
 public class Gamer {
 
-	private BufferedReader br;
+	private BufferedReader breader;
 	
     public static void main(String... args) {
-            new Gamer(new BufferedReader(new InputStreamReader(System.in))).play();
+            new Gamer().play();
     }
 
-    public Gamer (BufferedReader br) {
-    	this.br = br;
+    public void Gamer (BufferedReader breader) {
+    	this.breader = breader;
     }
     
     public void play() {
@@ -29,7 +29,7 @@ public class Gamer {
 
     public String read() {
             System.out.println("fizz buzz: ");
-            //BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             try {
                     return br.readLine();
             } catch (IOException ioe) {
